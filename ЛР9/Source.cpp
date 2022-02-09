@@ -12,19 +12,20 @@ mutex mx;
 
 void Punkt::buy() {
 		mx.lock();
-		cout << "ID ‰Îˇ ÔÓÍÛÔÍË " << this_thread::get_id() << " \t";
-		cout << "¬˚·ÂËÚÂ ÚÓ‚‡, ÍÓÚÓ˚È ıÓÚËÚÂ ÍÛÔËÚ¸: \n";
-		cout << "Eat(17–)\t Headphones(8990–)\t Cucumber(79–)\n";
+		cout << "ID √§√´√ø √Ø√Æ√™√≥√Ø√™√® " << this_thread::get_id() << " \t";
+		cout << "√Ç√ª√°√•√∞√®√≤√• √≤√Æ√¢√†√∞, √™√Æ√≤√Æ√∞√ª√© √µ√Æ√≤√®√≤√• √™√≥√Ø√®√≤√º: \n";
+		cout << "Eat(17√ê)\t Headphones(8990√ê)\t Cucumber(79√ê)\n";
 		string pokupka;
 		int kolvo;
 		cin >> pokupka;
-		cout << "¬‚Â‰ËÚÂ ÍÓÎË˜ÂÒÚ‚Ó ÚÓ‚‡‡: \n";
+		cout << "√Ç√¢√•√§√®√≤√• √™√Æ√´√®√∑√•√±√≤√¢√Æ √≤√Æ√¢√†√∞√†: \n";
 		cin >> kolvo;
 		if (pokupka == "eat") {
 			price = 17 * kolvo;
 		}
 		if (pokupka == "headphones") {
 			price = 8990 * kolvo;
+			setLocale(LC_ALL, "ru"); // –¥–æ–±–∞–≤–ª—è—é –ø—Ä–æ—Å—Ç–æ –¥–ª—è –ø—Ä–æ–≤–µ—Ä–∫–∏ —Ä–∞–±–æ—Ç—ã GitHub
 		}
 		if (pokupka == "cucumber")
 		{
@@ -37,21 +38,21 @@ void Punkt::buy() {
 		mx.unlock();
 
 		this_thread::sleep_for(chrono::milliseconds(3000));
-		cout << "ID ‰Îˇ ÔÓ‰Ú‚ÂÊ‰ÂÌËˇ " << this_thread::get_id() << " \t";
-		cout << "œÓÍÛÔÍ‡ ÒÓ‚Â¯ÂÌ‡ ÛÒÔÂ¯ÌÓ! \n";
+		cout << "ID √§√´√ø √Ø√Æ√§√≤√¢√•√∞√¶√§√•√≠√®√ø " << this_thread::get_id() << " \t";
+		cout << "√è√Æ√™√≥√Ø√™√† √±√Æ√¢√•√∞√∏√•√≠√† √≥√±√Ø√•√∏√≠√Æ! \n";
 		
 
 }
 
 void Punkt::delivery(string item) {
-	cout << "ID ‰Îˇ ‰ÓÒÚ‡‚ÍË " << this_thread::get_id() << " \t";
-		cout << item << " ÔÂÂ‰‡Ì ‚ ‰ÓÒÚ‡‚ÍÛ!\n\n";
+	cout << "ID √§√´√ø √§√Æ√±√≤√†√¢√™√® " << this_thread::get_id() << " \t";
+		cout << item << " √Ø√•√∞√•√§√†√≠ √¢ √§√Æ√±√≤√†√¢√™√≥!\n\n";
 }
 
 void Punkt::confirm() {
 	this_thread::sleep_for(chrono::milliseconds(3000));
-	cout << "ID ‰Îˇ ÔÓ‰Ú‚ÂÊ‰ÂÌËˇ " << this_thread::get_id() << " \t";
-	cout << "œÓÍÛÔÍ‡ ÒÓ‚Â¯ÂÌ‡ ÛÒÔÂ¯ÌÓ! \n";
+	cout << "ID √§√´√ø √Ø√Æ√§√≤√¢√•√∞√¶√§√•√≠√®√ø " << this_thread::get_id() << " \t";
+	cout << "√è√Æ√™√≥√Ø√™√† √±√Æ√¢√•√∞√∏√•√≠√† √≥√±√Ø√•√∏√≠√Æ! \n";
 }
 
 vector <string> Punkt::get_list() {
