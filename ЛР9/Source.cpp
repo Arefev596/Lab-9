@@ -25,6 +25,7 @@ void Punkt::buy() {
 		}
 		if (pokupka == "headphones") {
 			price = 8990 * kolvo;
+			int b; // добавляю из VSStudio комментарий для проверки
 			setLocale(LC_ALL, "ru"); // добавляю просто для проверки работы GitHub
 		}
 		if (pokupka == "cucumber")
